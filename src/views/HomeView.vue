@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { Alert, useWebApp } from 'vue-tg'
 const user = useWebApp().initData
-function AlertFunc(){
-  return "<Alert message='Кирилл Баран'/>"
-}
+let UserDataSTR;
+let UserDataJSON;
+UserDataSTR = JSON.stringify(decodeURIComponent(user));
+UserDataJSON = eval(UserDataSTR);
+console.log(UserDataJSON);
+
 </script>
 
 <template>
@@ -17,7 +20,7 @@ function AlertFunc(){
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
 
-    You are: {{JSON.stringify(decodeURIComponent(user))}}
+    You are: {{}}
   </main>
 </template>
 <script lang="ts">

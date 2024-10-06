@@ -4,8 +4,8 @@ const user = useWebApp().initData
 let UserDataSTR;
 let UserDataJSON;
 UserDataSTR = JSON.stringify(decodeURIComponent(user))
-UserDataSTR.replace(UserDataSTR, 'user=');
-UserDataJSON = eval(UserDataSTR);
+let UserDataSTR2 = UserDataSTR.replace(UserDataSTR, 'user=');
+UserDataJSON = eval(UserDataSTR2);
 console.log(UserDataJSON);
 
 </script>

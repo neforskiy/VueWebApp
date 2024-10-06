@@ -4,8 +4,9 @@ const user = useWebApp().initData
 let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
 let UserDataJSON = eval(UserDataSTR);
 console.log(typeof UserDataJSON);
-let UserDataJson = JSON.parse(UserDataJSON);
-console.log(typeof UserDataJson);
+let UserDataJson1 = JSON.stringify(UserDataJSON);
+let UserDataJson2 = JSON.parse(UserDataJson1);
+console.log(typeof UserDataJson2);
 
 </script>
 

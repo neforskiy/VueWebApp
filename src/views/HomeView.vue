@@ -5,6 +5,7 @@ let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
 let UserDataJSON = eval(UserDataSTR);
 console.log(typeof UserDataJSON);
 let UserDataJson1 = JSON.stringify(UserDataJSON);
+console.log(typeof UserDataJson1);
 let UserDataJson2 = JSON.parse(UserDataJson1);
 console.log(typeof UserDataJson2);
 

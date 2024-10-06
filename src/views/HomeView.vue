@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Alert } from 'vue-tg'
-
+import { Alert, useWebApp } from 'vue-tg'
+const user = useWebApp().initData
 function AlertFunc(){
   return "<Alert message='Кирилл Баран'/>"
 }
@@ -16,6 +16,8 @@ function AlertFunc(){
     {{scoreUpdate}}<br><br>
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
+
+    You are: {{user}}
   </main>
 </template>
 <script lang="ts">

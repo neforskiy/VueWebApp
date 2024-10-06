@@ -17,7 +17,7 @@ function AlertFunc(){
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
 
-    You are: {{decodeURIComponent(user)}}
+    You are: {{JSON.parse(decodeURIComponent(user))}}
   </main>
 </template>
 <script lang="ts">

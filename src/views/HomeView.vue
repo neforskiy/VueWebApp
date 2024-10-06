@@ -3,7 +3,7 @@ import { Alert, useWebApp } from 'vue-tg'
 const user = useWebApp().initData
 let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
 let UserDataJSON = eval(UserDataSTR);
-console.log(UserDataJSON);
+console.log(typeof UserDataJSON);
 
 </script>
 

@@ -8,9 +8,6 @@ let UserDataJson1 = JSON.stringify(UserDataJSON);
 console.log(typeof UserDataJson1);
 let UserDataJson2 = JSON.parse(UserDataJson1);
 console.log(typeof UserDataJson2);
-const UserDataJson3 = UserDataJson2.toJSON()
-console.log(typeof UserDataJson3);
-
 </script>
 
 <template>

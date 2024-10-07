@@ -5,12 +5,12 @@ let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
 UserDataSTR = UserDataSTR.replace(/}.*$/, '}');
 // console.log(JSON.parse(UserDataSTR.slice(1, -1)));
 UserDataSTR = UserDataSTR.slice(2, -1);
-console.log(UserDataSTR);
 UserDataSTR = UserDataSTR.replace(/\\/g, '');
 // UserDataSTR = JSON.parse(UserDataSTR);
-console.log(UserDataSTR);
-console.log(JSON.parse('{"id":1265852777,"first_name":"венсли? 🍅","last_name":"","username":"venslyy","language_code":"ru","allows_write_to_pm":true}'));
-
+// console.log(UserDataSTR);
+UserDataSTR = "{" + UserDataSTR + "}";
+let UserDataJSON = JSON.parse(UserDataSTR);
+console.log(UserDataJSON);
 </script>
 
 <template>

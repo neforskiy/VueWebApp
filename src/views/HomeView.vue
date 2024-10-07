@@ -5,7 +5,7 @@ let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
 let UserToJson = UserDataSTR.replace(/}/, '');
 UserToJson = UserToJson.replace(/&/g, ',');
 UserToJson = UserToJson.replace(/=/g, ':');
-UserToJson = UserToJson.slice(0, -1);
+UserToJson = UserToJson.slice(1, -1);
 UserToJson += "}";
 // UserToJson = JSON.parse(UserToJson);
 console.log(UserToJson);

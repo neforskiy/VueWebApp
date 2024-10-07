@@ -7,6 +7,7 @@ UserDataSTR = UserDataSTR.replace(/}.*$/, '}');
 console.log(UserDataSTR.slice(2, -1));
 UserDataSTR = UserDataSTR.slice(2, -1);
 UserDataSTR = UserDataSTR.replace("\\", '');
+alert(UserDataSTR);
 
 </script>
 

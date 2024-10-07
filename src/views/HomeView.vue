@@ -7,8 +7,8 @@ UserToJson = UserToJson.replace(/&/g, ',');
 UserToJson = UserToJson.replace(/=/g, ':');
 UserToJson = UserToJson.slice(2, -1);
 // UserToJson += "}";
-UserToJson = JSON.parse(UserToJson);
 UserToJson = UserToJson.replace(/\\/, '');
+UserToJson = JSON.parse(UserToJson);
 console.log(UserToJson);
 
 

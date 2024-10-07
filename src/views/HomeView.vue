@@ -8,6 +8,7 @@ UserDataSTR = UserDataSTR.slice(2, -1);
 UserDataSTR = UserDataSTR.replace(/\\/g, '');
 // UserDataSTR = JSON.parse(UserDataSTR);
 console.log(UserDataSTR);
+console.log(JSON.parse('"id":1265852777,"first_name":"венсли? 🍅","last_name":"","username":"venslyy","language_code":"ru","allows_write_to_pm":true'));
 
 </script>
 

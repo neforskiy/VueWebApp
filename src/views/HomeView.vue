@@ -4,10 +4,10 @@ const user = useWebApp().initData
 let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
 UserDataSTR = UserDataSTR.replace(/}.*$/, '}');
 // console.log(JSON.parse(UserDataSTR.slice(1, -1)));
-console.log(UserDataSTR.slice(2, -1));
 UserDataSTR = UserDataSTR.slice(2, -1);
 UserDataSTR = UserDataSTR.replace(/\\/g, '');
-alert(UserDataSTR);
+UserDataSTR = JSON.parse(UserDataSTR);
+console.log(UserDataSTR);
 
 </script>
 

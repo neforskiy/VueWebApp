@@ -9,6 +9,7 @@ console.log(typeof UserDataJson1);
 let UserDataJson2 = JSON.parse(UserDataJson1);
 console.log(typeof UserDataJson2);
 console.log(UserDataJson2);
+console.log(typeof JSON.parse('{"id":1265852777,"first_name":"венсли? 🍅","last_name":"","username":"venslyy","language_code":"ru","allows_write_to_pm":true}'))
 </script>
 
 <template>

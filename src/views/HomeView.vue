@@ -10,7 +10,6 @@ UserDataSTR = UserDataSTR.replace(/\\/g, '');
 // console.log(UserDataSTR);
 UserDataSTR = "{" + UserDataSTR + "}";
 let UserDataJSON = JSON.parse(UserDataSTR);
-console.log(UserDataJSON);
 </script>
 
 <template>
@@ -24,7 +23,7 @@ console.log(UserDataJSON);
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
 
-    You are: {{}}
+    Your ID: {{UserDataJSON.id}}
   </main>
 </template>
 <script lang="ts">

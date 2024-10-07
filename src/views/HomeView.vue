@@ -6,7 +6,7 @@ UserDataSTR = UserDataSTR.replace(/}.*$/, '}');
 // console.log(JSON.parse(UserDataSTR.slice(1, -1)));
 console.log(UserDataSTR.slice(2, -1));
 UserDataSTR = UserDataSTR.slice(2, -1);
-UserDataSTR = UserDataSTR.replace(/}.*$/, '');
+UserDataSTR = UserDataSTR.replace(/\\/, '');
 
 </script>
 

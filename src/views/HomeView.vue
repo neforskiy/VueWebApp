@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import { Alert, useWebApp } from 'vue-tg'
-const user = useWebApp().initData
-let UserDataSTR = JSON.stringify(decodeURIComponent(user)).replace('user=', '');
-UserDataSTR = UserDataSTR.replace(/}.*$/, '}');
-// console.log(JSON.parse(UserDataSTR.slice(1, -1)));
-UserDataSTR = UserDataSTR.slice(2, -1);
-UserDataSTR = UserDataSTR.replace(/\\/g, '');
-// UserDataSTR = JSON.parse(UserDataSTR);
-// console.log(UserDataSTR);
-UserDataSTR = "{" + UserDataSTR + "}";
-let UserDataJSON = JSON.parse(UserDataSTR);
+import {ref} from "vue";
+const webapp = useWebApp()
+const userData = JSON.parse(webapp.initData)
+const userId = ref(userData.id)
+
 </script>
 
 <template>
@@ -23,14 +18,14 @@ let UserDataJSON = JSON.parse(UserDataSTR);
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
 
-    Your ID: {{UserDataJSON.id}}
+    Your ID: {{userId}}
   </main>
 </template>
 <script lang="ts">
 
 export default {
   components: {
-    Alert
+    // Alert
   },
   data() {
     return {

@@ -2,8 +2,8 @@
 import { Alert, useWebApp } from 'vue-tg'
 import {ref} from "vue";
 const webapp = useWebApp()
-const userData = JSON.parse(webapp.initData)
-const userId = ref(userData.id)
+// const userData = JSON.parse(webapp.initData)
+// const userId = ref(userData.id)
 
 </script>
 
@@ -18,7 +18,7 @@ const userId = ref(userData.id)
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
 
-    Your ID: {{userId}}
+    Your ID: {{webapp.initData}}
   </main>
 </template>
 <script lang="ts">

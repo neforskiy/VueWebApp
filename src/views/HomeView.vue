@@ -1,9 +1,20 @@
 <script setup lang="ts">
-import { Alert, useWebApp } from 'vue-tg'
-import {ref} from "vue";
-const webapp = useWebApp()
-// const userData = JSON.parse(webapp.initData)
-// const userId = ref(userData.id)
+import { ref } from 'vue';
+import { Alert, useWebApp } from 'vue-tg';
+
+// Получаем данные о пользователе
+const webApp = useWebApp();
+const initData = webApp.initData;
+
+// Функция для декодирования и извлечения данных
+const getUserData = (initData: string) => {
+  const params = new URLSearchParams(initData);
+  const userJson = params.get('user'); // Получаем строку JSON из параметра 'user'
+  return userJson ? JSON.parse(decodeURIComponent(userJson)) : null; // Декодируем и парсим JSON
+};
+
+const userData = getUserData(initData); // Извлекаем данные о пользователе
+const userId = ref(userData ? userData.id : null); // Извлекаем ID пользователя
 
 </script>
 
@@ -18,7 +29,7 @@ const webapp = useWebApp()
     <button @click="mainBtn">Click to UP YOUR SCORE!</button><br><br>
     <!--    <Alert message="Hello TgMiniApp!!"/>-->
 
-    Your ID: {{webapp.initData}}
+    Your ID: {{userId}}
   </main>
 </template>
 <script lang="ts">
